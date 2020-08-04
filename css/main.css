@@ -156,10 +156,43 @@ max-width: 1264px;
     max-width: 1264px;
     background-repeat: no-repeat;
     display: grid;
-    grid-template-columns: repeat(12, 100px);
-    grid-template-rows: ;
-    grid-template-areas: ;
+    grid-template-columns: 300px repeat(5,120px) 300px;
+    grid-template-rows: 100px repeat(3,120px) 100px;
+    grid-template-areas: ". . . . . . ."
+                        ". photo1 . . . photo2 ."
+                        ". . photo3 . photo4 . ."
+                        ". . . photo6 . . ."
+                        ". . . . . . ."
+    ;
 }
+/* .community-photos  .photo {
+    display: grid;
+    width: 40px;
+} */
+.photo1 img {
+    grid-area: photo1;
+    width: 120px;
+}
+.photo2 img {
+    grid-area: photo2;
+    max-width: 120px;
+    }
+.photo3 img {
+    grid-area: photo3;
+    max-width: 120px;
+    }
+.photo4 img {
+     grid-area: photo3;
+    max-width: 120px;
+    }
+.photo5 img {
+    grid-area: photo3;
+    max-width: 120px;
+    }
+.photo6 img {
+    grid-area: photo3;
+    max-width: 120px;
+    }
 
 
 .main-container-img2 {
