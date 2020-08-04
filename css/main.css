@@ -155,51 +155,100 @@ max-width: 1264px;
     background-image: url('https://www.adippsa.com/Images/travellers/image2.png');
     max-width: 1264px;
     background-repeat: no-repeat;
+    background-position: center;
     display: grid;
-    grid-template-columns: 300px repeat(5,120px) 300px;
-    grid-template-rows: 100px repeat(3,120px) 100px;
-    grid-template-areas: ". . . . . . ."
-                        ". photo1 . . . photo2 ."
-                        ". . photo3 . photo4 . ."
-                        ". . . photo6 . . ."
-                        ". . . . . . ."
+    grid-template-columns: 1fr repeat(8,120px) 1fr;
+    grid-template-rows: repeat(5,120px);
+    grid-template-areas: ". . . . . . . photo2 . ."
+                        ". . photo1 . . . photo3 . . ."
+                        ". . . . . photo4 . . . ."
+                        ". . . photo5 . . . . . ."
+                        ". . . . . . . . photo6 . "
     ;
 }
 /* .community-photos  .photo {
     display: grid;
     width: 40px;
 } */
-.photo1 img {
-    grid-area: photo1;
-    width: 120px;
+.photo {
+    height: 80px; 
+    border-radius: 500px;
+    border-image: 1px solid rgba(0, 0, 0, .8);
+    line-height: 5px;
+    cursor: pointer;
+
 }
-.photo2 img {
+h5 {
+    margin: 3px;
+    font-size: 14px;
+    color: white;
+    background-color: rgba(0, 0, 0, .5);
+    cursor: pointer;
+    
+}
+h6{
+    margin: 0;
+    color: black;
+    background-color: rgba(206, 148, 39, 0.5);
+    font-weight: bolder;
+    cursor: pointer;
+}
+.photo1  {
+    grid-area: photo1;
+    align-self: flex-end;
+    
+    
+}
+.photo2  {
     grid-area: photo2;
-    max-width: 120px;
+    justify-self: start;
+    align-self: flex-end;
+    
     }
-.photo3 img {
+.photo3  {
     grid-area: photo3;
-    max-width: 120px;
+    
     }
-.photo4 img {
-     grid-area: photo3;
-    max-width: 120px;
+.photo4  {
+     grid-area: photo4;
+   
     }
-.photo5 img {
-    grid-area: photo3;
-    max-width: 120px;
+.photo5 {
+    grid-area: photo5;
+    
     }
-.photo6 img {
-    grid-area: photo3;
-    max-width: 120px;
+.photo6 {
+    grid-area: photo6;
+    
     }
 
 
 .main-container-img2 {
-    grid-area: imagen2;
+    background-image: url("https://www.adippsa.com/Images/travellers/image3.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 30% 40%;
+    grid-template-rows: 78% 22%;
+}
+.container-opinion {
+    background-color: white;
+    margin: 0;
 }
 .main-container-img2 img {
-    width: 100%;
+    width: 40px;
+    border-radius: 200px;
+    
+}
+.opinion {
+    font-size: 14px;
+    color: grey;
+}
+
+.name {
+    font-size: 14px;
+    color: rgb(209, 205, 205);
+    text-align: end;
 }
 
 .main-container-connected {
