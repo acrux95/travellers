@@ -219,7 +219,6 @@ h6{
     }
 .photo6 {
     grid-area: photo6;
-    
     }
 
 
@@ -232,22 +231,33 @@ h6{
     grid-template-rows: 78% 22%;
 }
 .container-opinion {
-    background-color: white;
-    margin: 0;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-left: 15px;
+    border-radius: 10px;
+    
+    
+}
+.container-img-container {
+    display: flex;
+    justify-self: end;
+    align-self: flex-start;
 }
 .main-container-img2 img {
     width: 40px;
     border-radius: 200px;
     
+    
+    
 }
 .opinion {
     font-size: 14px;
     color: grey;
+    margin-top: 2px;
 }
 
 .name {
     font-size: 14px;
-    color: rgb(209, 205, 205);
+    color: rgb(155, 148, 148);
     text-align: end;
 }
 
