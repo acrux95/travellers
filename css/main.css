@@ -453,6 +453,44 @@ label:active:after {
 .footer-map h4{
     padding-left: 40px;
 }
+.subscribe-input {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.subscribe-input-container a {
+    padding: 6px;
+    border-radius: 5px;
+    background-color: coral;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+
+}
+.subscribe-input-container input {
+    border: 1px solid gray;
+    height: 25px;
+    width: 150px;
+    border-radius: 5px;
+    font-size: 10px;
+    color: lightgray;
+}
+.raiting-form{
+width: max-content;
+margin-right: 60px;
+}
+
+.checked {
+    color: orange;
+}
+.div-raiting {
+padding: 10px;
+}
+.raiting {
+    font-size: 10px;
+    color: black;
+}
 .footer-bar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
