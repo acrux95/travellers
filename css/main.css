@@ -511,6 +511,7 @@ label:active:after {
     border-radius: 5px;
     font-size: 10px;
     color: var(--h3-color);
+    
 }
 .raiting-form{
 width: max-content;
