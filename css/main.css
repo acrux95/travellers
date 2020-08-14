@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 :root {
 
-    --h2-color: rgb(54, 16, 16);
+    --h3-color: rgb(54, 16, 16);
     --primary-color: rgb(255,228,196);
-    --h3-color: rgb(80 77 77);
+    --h2-color: rgb(80 77 77);
     --h4-color: rgb(80, 76, 76);
     --p-color: black;
     --a-color: black;
@@ -80,6 +80,17 @@ body {
     color: var(--ligth-contrast-color);
 }
 
+.header-main button:focus-visible {
+    height: 51px;
+    box-shadow: 2px 2px var(--h4-color);
+    font-size: 16px;
+    color: var(--ligth-contrast-color);
+    
+  }
+  .header-main button:focus-within a {
+    font-size: 16px;
+    color: var(--ligth-contrast-color);
+}
 
 .main-section {
     margin-top: 20px;
@@ -101,11 +112,14 @@ body {
 .main-title {
     grid-area: title;
     font-size: 55px;
-    color: var(--h2-color);
+    color: var(--h3-color);
     height: 500;
     display: flex;
     align-items: center;
     
+}
+h1:focus {
+    outline: 0;
 }
 
 .main-subtitle {
@@ -146,6 +160,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* float: right; */
     
 }
 .main-imagen1 img {
@@ -161,16 +176,19 @@ body {
 .main-container-community img {
     max-width: 1264px;
     }
-.container-community, .container-connected, .container-popular, .pricing-title, h3 {
+ 
+    .container-community, .container-connected, .container-popular, .pricing-title, h2 {
     font-size: 15px;
-    color: var(--h3-color);
+    color: var(--h2-color);
     font-weight: bold;
 }
-.container-community, .container-connected, .container-popular, .pricing-title, h2 {
-    font-size: 40px;
-    color: var(--h2-color);
-    
-}
+
+    .container-community, .container-connected, .container-popular, .pricing-title, h3 {
+        font-size: 40px;
+        color: var(--h3-color);
+    }
+   
+
 .community-photos {
     background-image: url('https://www.adippsa.com/Images/travellers/image2.png');
     max-width: 1264px;
@@ -189,27 +207,30 @@ body {
 
 .photo {
     height: 80px; 
-    border-radius: 500px;
+    width: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    shape-outside: circle();
     border-image: 1px solid rgba(0, 0, 0, .8);
     line-height: 5px;
     cursor: pointer;
-
 }
-h5 {
+.community-photo-name {
     margin: 3px;
-    font-size: 14px;
+    font-size: 14.5px;
     color: var(--ligth-contrast-color);
     background-color: rgba(0, 0, 0, .5);
     cursor: pointer;
     
 }
-h6 {
+.community-photo-country {
     margin: 0;
     background-color: var(--primary-color);
     opacity: .9;
     color: black;
     font-weight: bold;
     cursor: pointer;
+    font-size: .8em;
 }
 .photo1  {
     grid-area: photo1;
@@ -265,25 +286,29 @@ h6 {
     justify-content: flex-end; */
 }
 .connected-opinion-img img {
-    max-height: 50px;
-    border-radius: 200px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    shape-outside: circle();
 }
 .connected-opinion{
     grid-area: opinion;
     background-color: rgba(255, 255, 255, 0.8);
-    margin-left: 15px;
+    margin: 5px 15px;
     border-radius: 10px;
 }
 .opinion {
     font-size: 14px;
-    color: var(--h3-color);
+    color: var(--h2-color);
     margin-top: 2px;
 }
 
 .opinion-name {
     font-size: 14px;
-    color: var(--h3-color);
+    color: var(--h2-color);
     text-align: end;
+    margin-right: 10px;
 }
 
 
@@ -296,7 +321,7 @@ h6 {
     grid-template-columns: 20px 60%;
     cursor: pointer;
 }
-.main-container-connected h4, .main-container-connected p {
+.main-container-connected p {
     padding-left: 60px;
 }
 
@@ -351,13 +376,13 @@ h6 {
     justify-self: center;
 }
 
-input[type=checkbox]{
+.toggle-input[type=checkbox]{
 	height: 0;
 	width: 0;
 	visibility: hidden;
 }
 
-label {
+.toggle-label {
 	cursor: pointer;
 	text-indent: -9999px;
 	width: 60px;
@@ -370,7 +395,7 @@ label {
     
 }
 
-label:after {
+.toggle-label:after {
 	content: '';
 	position: absolute;
 	top: 5px;
@@ -382,16 +407,16 @@ label:after {
 	transition: 0.3s;
 }
 
-input:checked + label {
+.toggle-input:checked + label {
 	background: rgb(241, 121, 41);
 }
 
-input:checked + label:after {
+.toggle-input:checked + label:after {
 	left: calc(100% - 5px);
 	transform: translateX(-100%);
 }
 
-label:active:after {
+.toggle-label:active:after {
 	width: 65px;
 }
 
@@ -434,13 +459,18 @@ label:active:after {
     font-size: 20px;
 }
 .button-get {
+    height: 35px;
     border: orangered solid 1px;
-    color: black;
-    text-align: center;
     border-radius: 10px;
-    align-self: center;
-    cursor: pointer;
+    /* text-align: center;
     
+    align-self: center;
+    cursor: pointer; */
+}
+.button-get a {
+    text-decoration: none;
+    font-size: 1.2em;
+    color: black;
 }
 .download-section {
     grid-area: container6;
@@ -451,7 +481,7 @@ label:active:after {
     margin-top: 100px;
     padding: 20px 0 30px 0;
 }
-.download-section h2 {
+.download-section h3 {
     text-align: center;
     font-size: 30px;
     color: var(--ligth-contrast-color);
@@ -483,17 +513,24 @@ label:active:after {
 
 .footer-map li{
     list-style-type: none;
+    cursor: pointer;
+    line-height: 1.5em;
 }
-.footer-map h4{
+.footer-map p{
     padding-left: 40px;
+    cursor: pointer;
 }
-.subscribe-input {
+.subscribe-form {
+    margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    
+}
+.subscribe-input {
+    margin-left: 50px;
 }
 
-.subscribe-input-container a {
+.subscribe-form button {
+    margin-top: 20px;
     padding: 6px;
     border-radius: 5px;
     text-decoration: none;
@@ -501,32 +538,42 @@ label:active:after {
     font-size: 17px;
     color: var(--ligth-contrast-color);
     font-weight: 500;
-    
-
+    cursor: pointer;
+    border: none;
 }
-.subscribe-input-container input {
+
+.subscribe-form input {
+    margin-top: 20px;
     border: 1px solid gray;
-    height: 25px;
+    height: 30px;
     width: 150px;
     border-radius: 5px;
     font-size: 10px;
-    color: var(--h3-color);
-    
+    color: var(--h2-color);
+
 }
 .raiting-form{
 width: max-content;
 margin-right: 60px;
 }
-
+.raiting-form p {
+    font-size: .6em;
+}
+#name-error {
+    color: black;
+    
+  }
 .checked {
     color: orange;
 }
 .div-raiting {
-padding: 10px;
+    display: flex;
 }
+
 .raiting {
     font-size: 10px;
     color: black;
+    align-self: center;
 }
 .footer-bar {
     display: grid;
@@ -573,12 +620,21 @@ padding: 10px;
     text-decoration: none;
     font-size: 35px;
     color: black;
+    width: 50px;
+    display: inline-block;
     justify-content: center;
-    margin-right: 20px;
+    margin-right: 20px
+}
+.social-icons p {
+    display: flex;
+    justify-content: center;
+}
+.social-icons span {
+    margin-left: -6px;
 }
 .social-link-text {
     font-size: 10px;
     justify-content: center;
-    padding-left: 8px;
+    /* margin: 0 15px; */
     
 }
